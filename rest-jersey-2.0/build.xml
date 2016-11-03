@@ -1,0 +1,142 @@
+<!-- WARNING: Eclipse auto-generated file.
+              Any modifications will be overwritten.
+              To include a user specific buildfile here, simply create one in the same
+              directory with the processing instruction <?eclipse.ant.import?>
+              as the first entry and export the buildfile again. -->
+<project basedir="." default="build" name="rest-jersey-2.0">
+	<property environment="env"/>
+	<property name="ECLIPSE_HOME" value="C:/Users/SrikarRao/Desktop/JAVA/Source/eclipse/"/>
+	<property name="debuglevel" value="source,lines,vars"/>
+	<property name="target" value="1.7"/>
+	<property name="source" value="1.7"/>
+	<path id="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath">
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/annotations-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/catalina-ant.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/catalina-ha.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/catalina-tribes.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/catalina.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/ecj-4.4.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/el-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/FastInfoset.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/gmbal-api-only.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/ha-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jasper-el.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jasper.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/javax.annotation-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/javax.xml.soap-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jaxb-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jaxb-core.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jaxb-impl.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jaxb-jxc.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jaxb-xjc.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jaxws-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jaxws-rt.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jaxws-tools.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jsp-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/jsr181-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/management-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/mimepull.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/policy.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/resolver.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/saaj-impl.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/servlet-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/stax-ex.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/stax2-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/streambuffer.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat-coyote.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat-dbcp.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat-i18n-es.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat-i18n-fr.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat-i18n-ja.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat-jdbc.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat-util.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/tomcat7-websocket.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/websocket-api.jar"/>
+		<pathelement location="../../../../Desktop/JAVA/Source/apache-tomcat-7.0.56/lib/woodstox-core-asl.jar"/>
+	</path>
+	<path id="Maven Dependencies.libraryclasspath">
+		<pathelement location="../../../../.m2/repository/com/googlecode/json-simple/json-simple/1.1/json-simple-1.1.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/jersey/core/jersey-server/2.23.1/jersey-server-2.23.1.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/jersey/core/jersey-common/2.23.1/jersey-common-2.23.1.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/jersey/bundles/repackaged/jersey-guava/2.23.1/jersey-guava-2.23.1.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/hk2/osgi-resource-locator/1.0.1/osgi-resource-locator-1.0.1.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/jersey/core/jersey-client/2.23.1/jersey-client-2.23.1.jar"/>
+		<pathelement location="../../../../.m2/repository/javax/ws/rs/javax.ws.rs-api/2.0.1/javax.ws.rs-api-2.0.1.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/jersey/media/jersey-media-jaxb/2.23.1/jersey-media-jaxb-2.23.1.jar"/>
+		<pathelement location="../../../../.m2/repository/javax/annotation/javax.annotation-api/1.2/javax.annotation-api-1.2.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/hk2/hk2-api/2.4.0-b34/hk2-api-2.4.0-b34.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/hk2/hk2-utils/2.4.0-b34/hk2-utils-2.4.0-b34.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/hk2/external/aopalliance-repackaged/2.4.0-b34/aopalliance-repackaged-2.4.0-b34.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/hk2/external/javax.inject/2.4.0-b34/javax.inject-2.4.0-b34.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/hk2/hk2-locator/2.4.0-b34/hk2-locator-2.4.0-b34.jar"/>
+		<pathelement location="../../../../.m2/repository/org/javassist/javassist/3.18.1-GA/javassist-3.18.1-GA.jar"/>
+		<pathelement location="../../../../.m2/repository/javax/validation/validation-api/1.1.0.Final/validation-api-1.1.0.Final.jar"/>
+		<pathelement location="../../../../.m2/repository/org/glassfish/jersey/containers/jersey-container-servlet-core/2.23.1/jersey-container-servlet-core-2.23.1.jar"/>
+		<pathelement location="../../../../.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-json-provider/2.2.3/jackson-jaxrs-json-provider-2.2.3.jar"/>
+		<pathelement location="../../../../.m2/repository/com/fasterxml/jackson/jaxrs/jackson-jaxrs-base/2.2.3/jackson-jaxrs-base-2.2.3.jar"/>
+		<pathelement location="../../../../.m2/repository/com/fasterxml/jackson/core/jackson-core/2.2.3/jackson-core-2.2.3.jar"/>
+		<pathelement location="../../../../.m2/repository/com/fasterxml/jackson/core/jackson-databind/2.2.3/jackson-databind-2.2.3.jar"/>
+		<pathelement location="../../../../.m2/repository/com/fasterxml/jackson/core/jackson-annotations/2.2.3/jackson-annotations-2.2.3.jar"/>
+		<pathelement location="../../../../.m2/repository/com/fasterxml/jackson/module/jackson-module-jaxb-annotations/2.2.3/jackson-module-jaxb-annotations-2.2.3.jar"/>
+		<pathelement location="../../../../.m2/repository/javax/interceptor/javax.interceptor-api/1.2/javax.interceptor-api-1.2.jar"/>
+	</path>
+	<path id="JUnit 4.libraryclasspath">
+		<pathelement location="${ECLIPSE_HOME}plugins/org.junit_4.11.0.v201303080030/junit.jar"/>
+		<pathelement location="${ECLIPSE_HOME}plugins/org.hamcrest.core_1.3.0.v201303031735.jar"/>
+	</path>
+	<path id="rest-jersey-2.0.classpath">
+		<pathelement location="target/classes"/>
+		<path refid="Apache Tomcat v7.0 [Apache Tomcat v7.0].libraryclasspath"/>
+		<path refid="Maven Dependencies.libraryclasspath"/>
+		<path refid="JUnit 4.libraryclasspath"/>
+	</path>
+	<path id="run.JSONWriter.classpath">
+		<path refid="rest-jersey-2.0.classpath"/>
+		<path refid="Maven Dependencies.libraryclasspath"/>
+	</path>
+	<path id="run.VarargsExample3.classpath">
+		<path refid="rest-jersey-2.0.classpath"/>
+		<path refid="Maven Dependencies.libraryclasspath"/>
+	</path>
+	<target name="init">
+		<mkdir dir="target/classes"/>
+		<copy includeemptydirs="false" todir="target/classes">
+			<fileset dir="src">
+				<exclude name="**/*.launch"/>
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+		<copy includeemptydirs="false" todir="target/classes">
+			<fileset dir="test">
+				<exclude name="**/*.launch"/>
+				<exclude name="**/*.java"/>
+			</fileset>
+		</copy>
+	</target>
+	<target name="clean">
+		<delete dir="target/classes"/>
+	</target>
+	<target depends="clean" name="cleanall"/>
+	<target depends="build-subprojects,build-project" name="build"/>
+	<target name="build-subprojects"/>
+	<target depends="init" name="build-project">
+		<echo message="${ant.project.name}: ${ant.file}"/>
+		<javac debug="true" debuglevel="${debuglevel}" destdir="target/classes" includeantruntime="false" source="${source}" target="${target}">
+			<src path="src"/>
+			<src path="test"/>
+			<classpath refid="rest-jersey-2.0.classpath"/>
+		</javac>
+	</target>
+	<target description="Build all projects which reference this project. Useful to propagate changes." name="build-refprojects"/>
+	<target name="JSONWriter">
+		<java classname="com.poc.webservices.rest.jersey2.methods.JSONWriter" failonerror="true" fork="yes">
+			<classpath refid="run.JSONWriter.classpath"/>
+		</java>
+	</target>
+	<target name="VarargsExample3">
+		<java classname="com.poc.webservices.rest.jersey2.filters.VarargsExample3" failonerror="true" fork="yes">
+			<classpath refid="run.VarargsExample3.classpath"/>
+		</java>
+	</target>
+</project>

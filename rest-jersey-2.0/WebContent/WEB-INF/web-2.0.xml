@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns="http://java.sun.com/xml/ns/javaee"
+	xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+	id="WebApp_ID" version="3.0">
+	<display-name>rest-jersey-2.x</display-name>
+	<servlet>
+		<servlet-name>jersey-servlet</servlet-name>
+		<servlet-class>org.glassfish.jersey.servlet.ServletContainer</servlet-class>
+		<init-param>
+			<param-name>jersey.config.server.provider.packages</param-name>
+			<param-value>com.poc.webservices.rest.jersey2.resources,com.poc.webservices.rest.jersey2.filters,com.poc.webservices.rest.jersey2.interceptors,com.jersey.jaxb,com.fasterxml.jackson.jaxrs.json</param-value>
+		</init-param>
+		<init-param>
+			<param-name>jersey.config.server.provider.scanning.recursive</param-name>
+			<param-value>false</param-value>
+		</init-param>
+		<load-on-startup>1</load-on-startup>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>jersey-servlet</servlet-name>
+		<url-pattern>/resources/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Filter to print the request and response -->
+	<!-- <filter> <filter-name>Rest-Filter</filter-name> <filter-class>com.poc.webservices.rest.jersey2.filters.RestWSFilter</filter-class> 
+		<init-param> <param-name>restFilterRequest</param-name> <param-value>true</param-value> 
+		</init-param> <init-param> <param-name>restFilterResponse</param-name> <param-value>true</param-value> 
+		</init-param> </filter> <filter-mapping> <filter-name>Rest-Filter</filter-name> 
+		<url-pattern>/resources/*</url-pattern> </filter-mapping> -->
+</web-app>
