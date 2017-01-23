@@ -3,6 +3,7 @@ package com.poc.webservices.rest.jersey2.resources;
 import java.io.File;
 import java.util.List;
 import java.util.Map;
+import java.util.concurrent.TimeUnit;
 import javax.ws.rs.Consumes;
 import javax.ws.rs.DefaultValue;
 import javax.ws.rs.FormParam;
@@ -13,6 +14,9 @@ import javax.ws.rs.Path;
 import javax.ws.rs.PathParam;
 import javax.ws.rs.Produces;
 import javax.ws.rs.QueryParam;
+import javax.ws.rs.container.AsyncResponse;
+import javax.ws.rs.container.Suspended;
+import javax.ws.rs.container.TimeoutHandler;
 import javax.ws.rs.core.Context;
 import javax.ws.rs.core.Cookie;
 import javax.ws.rs.core.HttpHeaders;
@@ -21,6 +25,7 @@ import javax.ws.rs.core.MultivaluedMap;
 import javax.ws.rs.core.Response;
 import javax.ws.rs.core.Response.ResponseBuilder;
 import javax.ws.rs.core.UriInfo;
+import com.poc.webservices.rest.jersey2.models.RequestData;
 
 /**
  * JAVA Class representing rest-jersey-2.0 implementation
@@ -71,6 +76,40 @@ public class RestWSResources {
 	@Consumes("text/plain")
 	public void postClichedMessage(String message) {
 		System.out.println("Successfully posted message: " + message);
+	}
+
+	/**
+	 * Method to post a message
+	 * http://localhost:8080/rest-jersey-2.0/resources/ws/asyncCall
+	 * 
+	 */
+	@GET
+	@Path("/asyncCall")
+	public void asyncGet(final RequestData request,
+			@Suspended final AsyncResponse asyncResponse) {
+
+		asyncResponse.setTimeoutHandler(new TimeoutHandler() {
+			@Override
+			public void handleTimeout(AsyncResponse asyncResponse) {
+				asyncResponse.resume(Response
+						.status(Response.Status.SERVICE_UNAVAILABLE)
+						.entity("Operation time out.").build());
+			}
+		});
+		asyncResponse.setTimeout(20, TimeUnit.SECONDS);
+
+		new Thread(new Runnable() {
+			@Override
+			public void run() {
+				String result = veryExpensiveOperation(request);
+				asyncResponse.resume(result);
+			}
+
+			private String veryExpensiveOperation(RequestData req) {
+				return "Name is : " + req.getName() + ",Age is: "
+						+ req.getAge();
+			}
+		}).start();
 	}
 
 	/**
@@ -243,5 +282,4 @@ public class RestWSResources {
 				"attachment; filename=image_from_server.png");
 		return response.build();
 	}
-
 }
